@@ -1,7 +1,9 @@
 async function fetchApiKey() {
     try {
         const response = await fetch('/api/key');
+        console.log(response);
         const data = await response.json();
+           
         return data.apiKey;
     } catch (error) {
         console.error('Failed to fetch the API key:', error);
