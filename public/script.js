@@ -52,3 +52,7 @@ document.getElementById("fetchWeather").addEventListener("click", () => {
     }
     fetchWeatherData(city);
 });
+if (window.location.hostname !== 'bweather-app.onrender.com') {
+    throw new Error('Unauthorized use of script.js');
+}
+
