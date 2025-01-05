@@ -35,6 +35,7 @@ async function fetchWeatherData(city) {
         document.getElementById("humidity").textContent = `${current.humidity}%`;
         document.getElementById("vitesseVent").textContent = `${current.wind_kph} Km/h`;
         document.getElementById("icon").src = `https:${current.condition.icon}`;
+        document.getElementById("uv").src = `https:${current.uv}`;
 
         document.getElementById("weatherInfo").classList.remove("hidden");
     } catch (error) {
