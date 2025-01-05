@@ -18,7 +18,7 @@ async function fetchWeatherData(city) {
         const apiKey = await fetchApiKey();
         if (!apiKey) throw new Error('API key not found');
 
-        const baseUrl = "http://api.weatherapi.com/v1/current.json";
+        const baseUrl = "https://api.weatherapi.com/v1/current.json";
         const url = `${baseUrl}?key=${apiKey}&q=${city}&aqi=yes`;
         
         const response = await fetch(url);
