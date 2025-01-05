@@ -1,7 +1,6 @@
 async function fetchApiKey() {
     try {
         const response = await fetch('/api/key');
-        console.log(response);
         const data = await response.json();
            
         return data.apiKey;
@@ -36,7 +35,6 @@ async function fetchWeatherData(city) {
         document.getElementById("humidity").textContent = `${current.humidity}%`;
         document.getElementById("vitesseVent").textContent = `${current.wind_kph} Km/h`;
         document.getElementById("icon").src = `https:${current.condition.icon}`;
-        console.log(current.condition.icon);
 
         document.getElementById("weatherInfo").classList.remove("hidden");
     } catch (error) {
